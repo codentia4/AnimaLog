@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/owner/dashboard}">Dashboard</a>
+                <a th:href="@{/owner/pets}">My Pets</a>
+                <a th:href="@{/owner/appointments}" class="active">Appointments</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Book New Appointment</h1>
+            </header>
+            
+            <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+            
+            <div class="form-container">
+                <form th:action="@{/owner/appointments/add}" th:object="${appointment}" method="post">
+                    
+                    <div class="form-group">
+                        <label>Select Pet *</label>
+                        <select th:field="*{petId}" required>
+                            <option value="">Choose a pet</option>
+                            <option th:each="pet : ${pets}" 
+                                    th:value="${pet.id}" 
+                                    th:text="${pet.name} + ' (' + ${pet.species} + ')'">
+                            </option>
+                        </select>
+                        <p th:if="${pets == null or pets.isEmpty()}" style="color: #e74c3c; margin-top: 0.5rem;">
+                            No pets found. Please add a pet first.
+                        </p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Appointment Date & Time *</label>
+                            <!-- ✅ FIXED LINE BELOW -->
+                            <input type="datetime-local" 
+                                   th:field="*{appointmentDatetime}" 
+                                   required
+                                   th:min="${#temporals.format(#temporals.createNow(), 'yyyy-MM-dd''T''HH:mm')}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Select Veterinarian *</label>
+                            <select th:field="*{veterinarianName}" required>
+                                <option value="">Choose a veterinarian</option>
+                                <option th:each="vet : ${veterinarians}" 
+                                        th:value="${vet.fullName}" 
+                                        th:text="'Dr. ' + ${vet.fullName}">
+                                </option>
+                            </select>
+                            <p th:if="${veterinarians == null or veterinarians.isEmpty()}" style="color: #e74c3c; margin-top: 0.5rem;">
+                                No veterinarians available. Please contact admin.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Purpose *</label>
+                        <select th:field="*{purpose}" required>
+                            <option value="">Select purpose</option>
+                            <option value="Regular Checkup">Regular Checkup</option>
+                            <option value="Vaccination">Vaccination</option>
+                            <option value="Dental Care">Dental Care</option>
+                            <option value="Surgery Consultation">Surgery Consultation</option>
+                            <option value="Emergency">Emergency</option>
+                            <option value="Follow-up Visit">Follow-up Visit</option>
+                            <option value="Lab Tests">Lab Tests</option>
+                            <option value="Grooming">Grooming</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Notes</label>
+                        <textarea th:field="*{notes}" 
+                                  rows="4" 
+                                  placeholder="Any specific concerns or symptoms..."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Book Appointment</button>
+                        <a th:href="@{/owner/appointments}" class="btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Available Veterinarians Info -->
+            <div class="section" style="margin-top: 2rem;" th:if="${veterinarians != null and !veterinarians.isEmpty()}">
+                <h2>Available Veterinarians</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                    
+                    <div th:each="vet : ${veterinarians}" 
+                         style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4CAF50; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h3 style="margin-bottom: 0.5rem; color: #2c3e50;">
+                            👨‍⚕️ Dr. <span th:text="${vet.fullName}">Veterinarian</span>
+                        </h3>
+                        <p style="color: #666; margin: 0.5rem 0;">
+                            📞 <span th:text="${vet.phone != null ? vet.phone : 'Not provided'}">Phone</span>
+                        </p>
+                        <p style="color: #666; margin: 0.5rem 0;">
+                            📧 <span th:text="${vet.email}">Email</span>
+                        </p>
+                        <p style="color: #4CAF50; font-weight: 600; margin-top: 1rem;">
+                            ✓ Available for appointments
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>
+s

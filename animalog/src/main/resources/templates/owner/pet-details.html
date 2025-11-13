@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Details - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/owner/dashboard}">Dashboard</a>
+                <a th:href="@{/owner/pets}" class="active">My Pets</a>
+                <a th:href="@{/owner/appointments}">Appointments</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1 th:text="${pet.name} + ' - Details'"></h1>
+                <div>
+                    <a th:href="@{/owner/pets/edit/{id}(id=${pet.id})}" class="btn-primary">Edit</a>
+                    <a th:href="@{/owner/pets}" class="btn-secondary">Back</a>
+                </div>
+            </header>
+            
+            <!-- Pet Photo Section -->
+            <div class="section">
+                <h2>Pet Photo</h2>
+                <div th:if="${pet.imageUrl != null}">
+                    <img th:src="@{${pet.imageUrl}}" 
+                         style="max-width: 500px; width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                </div>
+                <div th:if="${pet.imageUrl == null}" style="text-align: center; padding: 3rem; color: #999;">
+                    <div style="font-size: 6rem;">🐾</div>
+                    <p>No photo uploaded</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Basic Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <p th:text="${pet.name}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Species:</label>
+                        <p th:text="${pet.species}"></p>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Breed:</label>
+                        <p th:text="${pet.breed}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <p th:text="${pet.gender}"></p>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date of Birth:</label>
+                        <p th:text="${pet.dateOfBirth != null ? #temporals.format(pet.dateOfBirth, 'dd-MM-yyyy') : 'Not provided'}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Weight:</label>
+                        <p th:text="${pet.weight != null ? pet.weight + ' kg' : 'Not provided'}"></p>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Microchip ID:</label>
+                        <p th:text="${pet.microchipId != null ? pet.microchipId : 'Not provided'}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Status:</label>
+                        <p th:text="${pet.status}"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Owner Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Owner Name:</label>
+                        <p th:text="${pet.ownerName}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone:</label>
+                        <p th:text="${pet.ownerPhone}"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

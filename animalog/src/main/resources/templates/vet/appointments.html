@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/vet/dashboard}">Dashboard</a>
+                <a th:href="@{/vet/appointments}" class="active">Appointments</a>
+                <a th:href="@{/vet/medical-records}">Medical Records</a>
+                <a th:href="@{/vet/vaccinations}">Vaccinations</a>
+                <a th:href="@{/vet/prescriptions}">Prescriptions</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>All Appointments</h1>
+            </header>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date & Time</th>
+                            <th>Pet ID</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="apt : ${appointments}">
+                            <td th:text="${#temporals.format(apt.appointmentDatetime, 'dd-MM-yyyy HH:mm')}"></td>
+                            <td th:text="${apt.petId}"></td>
+                            <td th:text="${apt.purpose}"></td>
+                            <td>
+                                <span class="badge" 
+                                      th:classappend="${apt.status == 'SCHEDULED' ? 'badge-info' : 'badge-success'}" 
+                                      th:text="${apt.status}"></span>
+                            </td>
+                            <td th:text="${apt.notes}"></td>
+                            <td>
+                                <a th:if="${apt.status == 'SCHEDULED'}" 
+                                   th:href="@{/vet/appointments/complete/{id}(id=${apt.id})}" 
+                                   class="btn-sm">Complete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

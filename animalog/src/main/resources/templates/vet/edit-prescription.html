@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Prescription - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/vet/dashboard}">Dashboard</a>
+                <a th:href="@{/vet/appointments}">Appointments</a>
+                <a th:href="@{/vet/medical-records}">Medical Records</a>
+                <a th:href="@{/vet/vaccinations}">Vaccinations</a>
+                <a th:href="@{/vet/prescriptions}" class="active">Prescriptions</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Edit Prescription</h1>
+            </header>
+            
+            <div class="form-container">
+                <form th:action="@{/vet/prescriptions/edit/{id}(id=${prescription.id})}" th:object="${prescription}" method="post">
+                    <div class="form-group">
+                        <label>Pet ID *</label>
+                        <input type="number" th:field="*{petId}" readonly>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Medication Name *</label>
+                            <input type="text" th:field="*{medicationName}" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Dosage *</label>
+                            <input type="text" th:field="*{dosage}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Frequency *</label>
+                        <input type="text" th:field="*{frequency}" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Date *</label>
+                            <input type="date" th:field="*{startDate}" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>End Date *</label>
+                            <input type="date" th:field="*{endDate}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select th:field="*{status}">
+                            <option value="ACTIVE">Active</option>
+                            <option value="COMPLETED">Completed</option>
+                            <option value="DISCONTINUED">Discontinued</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Instructions</label>
+                        <textarea th:field="*{instructions}" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Update Prescription</button>
+                        <a th:href="@{/vet/prescriptions}" class="btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

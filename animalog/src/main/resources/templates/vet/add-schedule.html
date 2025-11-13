@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Schedule - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/vet/dashboard}">Dashboard</a>
+                <a th:href="@{/vet/schedule}" class="active">My Schedule</a>
+                <a th:href="@{/vet/appointments}">Appointments</a>
+                <a th:href="@{/vet/medical-records}">Medical Records</a>
+                <a th:href="@{/vet/vaccinations}">Vaccinations</a>
+                <a th:href="@{/vet/prescriptions}">Prescriptions</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Add Availability Time Slot</h1>
+            </header>
+            
+            <div class="form-container">
+                <form th:action="@{/vet/schedule/add}" th:object="${schedule}" method="post">
+                    <div class="form-group">
+                        <label>Day of Week *</label>
+                        <select th:field="*{dayOfWeek}" required>
+                            <option value="">Select Day</option>
+                            <option value="MONDAY">Monday</option>
+                            <option value="TUESDAY">Tuesday</option>
+                            <option value="WEDNESDAY">Wednesday</option>
+                            <option value="THURSDAY">Thursday</option>
+                            <option value="FRIDAY">Friday</option>
+                            <option value="SATURDAY">Saturday</option>
+                            <option value="SUNDAY">Sunday</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Time *</label>
+                            <input type="time" th:field="*{startTime}" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>End Time *</label>
+                            <input type="time" th:field="*{endTime}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Maximum Appointments Per Hour *</label>
+                        <input type="number" 
+                               th:field="*{maxAppointmentsPerSlot}" 
+                               min="1" 
+                               max="10" 
+                               value="4"
+                               required>
+                        <small style="color: #666; display: block; margin-top: 0.5rem;">
+                            Recommended: 4 appointments per hour to avoid overbooking
+                        </small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox" th:field="*{isActive}" checked>
+                            <span>Active (visible to pet owners)</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Save Schedule</button>
+                        <a th:href="@{/vet/schedule}" class="btn-secondary">Cancel</a>
+                    </div>
+                </form>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fff3cd; border-radius: 10px; border-left: 4px solid #ffc107;">
+                    <h3 style="margin-top: 0; color: #856404;">💡 Tips:</h3>
+                    <ul style="margin-bottom: 0; line-height: 1.8;">
+                        <li>You can add multiple time slots for the same day</li>
+                        <li>Example: 9 AM - 1 PM and 3 PM - 6 PM for lunch break</li>
+                        <li>Set realistic appointment limits to provide quality care</li>
+                        <li>You can temporarily deactivate a schedule without deleting it</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>

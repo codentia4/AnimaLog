@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Medical Record - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/vet/dashboard}">Dashboard</a>
+                <a th:href="@{/vet/appointments}">Appointments</a>
+                <a th:href="@{/vet/medical-records}" class="active">Medical Records</a>
+                <a th:href="@{/vet/vaccinations}">Vaccinations</a>
+                <a th:href="@{/vet/prescriptions}">Prescriptions</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Edit Medical Record</h1>
+            </header>
+            
+            <div class="form-container">
+                <form th:action="@{/vet/medical-records/edit/{id}(id=${record.id})}" th:object="${record}" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Pet ID *</label>
+                            <input type="number" th:field="*{petId}" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Visit Date *</label>
+                            <input type="date" th:field="*{visitDate}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Record Type *</label>
+                        <select th:field="*{recordType}" required>
+                            <option value="CHECKUP">Checkup</option>
+                            <option value="VACCINATION">Vaccination</option>
+                            <option value="TREATMENT">Treatment</option>
+                            <option value="EMERGENCY">Emergency</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Diagnosis</label>
+                        <textarea th:field="*{diagnosis}" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Treatment</label>
+                        <textarea th:field="*{treatment}" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Medication</label>
+                            <input type="text" th:field="*{medication}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cost</label>
+                            <input type="number" step="0.01" th:field="*{cost}">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Notes</label>
+                        <textarea th:field="*{notes}" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Update Record</button>
+                        <a th:href="@{/vet/medical-records}" class="btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

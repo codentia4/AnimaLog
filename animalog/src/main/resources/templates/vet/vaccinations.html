@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaccinations - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/vet/dashboard}">Dashboard</a>
+                <a th:href="@{/vet/appointments}">Appointments</a>
+                <a th:href="@{/vet/medical-records}">Medical Records</a>
+                <a th:href="@{/vet/vaccinations}" class="active">Vaccinations</a>
+                <a th:href="@{/vet/prescriptions}">Prescriptions</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Vaccinations</h1>
+                <a th:href="@{/vet/vaccinations/add}" class="btn-primary">Add Vaccination</a>
+            </header>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pet ID</th>
+                            <th>Vaccine Name</th>
+                            <th>Vaccination Date</th>
+                            <th>Next Due Date</th>
+                            <th>Batch Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="vacc : ${vaccinations}">
+                            <td th:text="${vacc.petId}"></td>
+                            <td th:text="${vacc.vaccineName}"></td>
+                            <td th:text="${#temporals.format(vacc.vaccinationDate, 'dd-MM-yyyy')}"></td>
+                            <td th:text="${#temporals.format(vacc.nextDueDate, 'dd-MM-yyyy')}"></td>
+                            <td th:text="${vacc.batchNumber}"></td>
+                            <td>
+                                <a th:href="@{/vet/vaccinations/edit/{id}(id=${vacc.id})}" class="btn-sm">Edit</a>
+                                <a th:href="@{/vet/vaccinations/delete/{id}(id=${vacc.id})}" 
+                                   class="btn-sm btn-danger"
+                                   onclick="return confirm('Delete this vaccination?')">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+2025-11-09T17:19:56.298+05:30  INFO 13816 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 13816 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T17:19:56.300+05:30 DEBUG 13816 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T17:19:56.301+05:30  INFO 13816 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T17:19:56.353+05:30  INFO 13816 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-09T17:19:56.354+05:30  INFO 13816 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-09T17:19:57.161+05:30  INFO 13816 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T17:19:57.271+05:30  INFO 13816 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 7 JPA repository interfaces.
+2025-11-09T17:19:57.997+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T17:19:58.005+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T17:19:58.005+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T17:19:58.055+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T17:19:58.056+05:30  INFO 13816 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
+2025-11-09T17:19:58.164+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T17:19:58.214+05:30  INFO 13816 --- [AnimaLog] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-09T17:19:58.256+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T17:19:58.459+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T17:19:58.482+05:30  INFO 13816 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-09T17:19:58.693+05:30  INFO 13816 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41b4e31
+2025-11-09T17:19:58.695+05:30  INFO 13816 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-09T17:19:58.744+05:30  WARN 13816 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T17:19:59.636+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T17:19:59.793+05:30  INFO 13816 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T17:20:00.095+05:30 DEBUG 13816 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T17:20:00.500+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T17:20:00.700+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@518930c8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4675bb33, org.springframework.security.web.context.SecurityContextHolderFilter@3e8b25d5, org.springframework.security.web.header.HeaderWriterFilter@36c7e434, org.springframework.web.filter.CorsFilter@2a84ec01, org.springframework.security.web.authentication.logout.LogoutFilter@60c74a6b, com.animalog.config.JwtAuthenticationFilter@9bb420f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21cd1740, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24fff51f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a4e35cc, org.springframework.security.web.session.SessionManagementFilter@716820ed, org.springframework.security.web.access.ExceptionTranslationFilter@1d467656, org.springframework.security.web.access.intercept.AuthorizationFilter@603efab0]
+2025-11-09T17:20:00.960+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-09T17:20:01.011+05:30  INFO 13816 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-11-09T17:20:01.020+05:30  INFO 13816 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Started AnimaLogApplication in 5.102 seconds (process running for 5.776)
+2025-11-09T17:22:09.798+05:30  INFO 13816 --- [AnimaLog] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-09T17:22:09.798+05:30  INFO 13816 --- [AnimaLog] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-09T17:22:09.803+05:30  INFO 13816 --- [AnimaLog] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-11-09T17:22:09.829+05:30  WARN 13816 --- [AnimaLog] [http-nio-8081-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-09T17:22:09.854+05:30  WARN 13816 --- [AnimaLog] [http-nio-8081-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-09T17:25:48.483+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 12356 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T17:25:48.486+05:30 DEBUG 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T17:25:48.487+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T17:25:48.536+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-09T17:25:48.536+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-09T17:25:49.361+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T17:25:49.435+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2025-11-09T17:25:50.009+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T17:25:50.020+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T17:25:50.021+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T17:25:50.094+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T17:25:50.094+05:30  INFO 12356 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1557 ms
+2025-11-09T17:25:50.232+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T17:25:50.308+05:30  INFO 12356 --- [AnimaLog] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-09T17:25:50.357+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T17:25:50.631+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T17:25:50.666+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-09T17:25:50.865+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c5a837
+2025-11-09T17:25:50.867+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-09T17:25:50.938+05:30  WARN 12356 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T17:25:51.992+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T17:25:52.154+05:30  INFO 12356 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T17:25:52.436+05:30 DEBUG 12356 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T17:25:52.917+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T17:25:53.121+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36da3e8c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ca2e1be, org.springframework.security.web.context.SecurityContextHolderFilter@58a9b138, org.springframework.security.web.header.HeaderWriterFilter@69645916, org.springframework.web.filter.CorsFilter@373e0e8b, org.springframework.security.web.authentication.logout.LogoutFilter@36d63da1, com.animalog.config.JwtAuthenticationFilter@412e6cde, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@292802b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f66d67e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63d42ee, org.springframework.security.web.session.SessionManagementFilter@1fb43b9d, org.springframework.security.web.access.ExceptionTranslationFilter@36bac9cf, org.springframework.security.web.access.intercept.AuthorizationFilter@97a6b12]
+2025-11-09T17:25:53.395+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-09T17:25:53.449+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-11-09T17:25:53.457+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Started AnimaLogApplication in 5.378 seconds (process running for 6.162)
+2025-11-09T17:28:08.883+05:30  INFO 12356 --- [AnimaLog] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-09T17:28:08.884+05:30  INFO 12356 --- [AnimaLog] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-09T17:28:08.891+05:30  INFO 12356 --- [AnimaLog] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-11-09T17:28:08.916+05:30  WARN 12356 --- [AnimaLog] [http-nio-8081-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-09T18:01:06.996+05:30  WARN 12356 --- [AnimaLog] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m44s309ms515µs500ns).
+2025-11-09T18:09:17.569+05:30  INFO 12356 --- [AnimaLog] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-09T18:09:18.176+05:30  INFO 12356 --- [AnimaLog] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:09:18.394+05:30  INFO 12356 --- [AnimaLog] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-09T18:09:18.437+05:30  INFO 12356 --- [AnimaLog] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-09T18:09:19.200+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 12356 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T18:09:19.201+05:30 DEBUG 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T18:09:19.202+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T18:09:20.149+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T18:09:20.180+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 33320 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T18:09:20.204+05:30 DEBUG 33320 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T18:09:20.214+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T18:09:20.373+05:30  INFO 33320 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-09T18:09:20.374+05:30  INFO 33320 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-09T18:09:20.404+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 253 ms. Found 7 JPA repository interfaces.
+2025-11-09T18:09:21.180+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T18:09:21.181+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T18:09:21.181+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T18:09:21.218+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T18:09:21.218+05:30  INFO 12356 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2006 ms
+2025-11-09T18:09:21.273+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T18:09:21.277+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T18:09:21.287+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T18:09:21.290+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-09T18:09:21.386+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ad9ba30
+2025-11-09T18:09:21.387+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-09T18:09:21.391+05:30  WARN 12356 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T18:09:21.598+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T18:09:21.824+05:30  INFO 12356 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:09:21.901+05:30 DEBUG 12356 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T18:09:22.079+05:30  INFO 33320 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T18:09:22.189+05:30  INFO 33320 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 7 JPA repository interfaces.
+2025-11-09T18:09:22.197+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T18:09:22.315+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@255628c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ef21d08, org.springframework.security.web.context.SecurityContextHolderFilter@da26c08, org.springframework.security.web.header.HeaderWriterFilter@7bd1564, org.springframework.web.filter.CorsFilter@5deecbdc, org.springframework.security.web.authentication.logout.LogoutFilter@3261a704, com.animalog.config.JwtAuthenticationFilter@70f0a5dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22fe4665, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d87616b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d20ddab, org.springframework.security.web.session.SessionManagementFilter@6aab77bc, org.springframework.security.web.access.ExceptionTranslationFilter@15f75081, org.springframework.security.web.access.intercept.AuthorizationFilter@3db3bbb9]
+2025-11-09T18:09:22.501+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-09T18:09:22.531+05:30  INFO 12356 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-11-09T18:09:22.540+05:30  INFO 12356 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Started AnimaLogApplication in 3.432 seconds (process running for 2615.246)
+2025-11-09T18:09:22.544+05:30  INFO 12356 --- [AnimaLog] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-09T18:09:23.141+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T18:09:23.156+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T18:09:23.158+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T18:09:23.239+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T18:09:23.239+05:30  INFO 33320 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2855 ms
+2025-11-09T18:09:23.462+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T18:09:23.570+05:30  INFO 33320 --- [AnimaLog] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-09T18:09:23.654+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T18:09:24.028+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T18:09:24.068+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-09T18:09:24.333+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@760dd8fa
+2025-11-09T18:09:24.337+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-09T18:09:24.452+05:30  WARN 33320 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T18:09:25.864+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T18:09:27.204+05:30  INFO 33320 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:09:27.677+05:30 DEBUG 33320 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T18:09:28.256+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T18:09:28.517+05:30  INFO 33320 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4697de4b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bd16ac1, org.springframework.security.web.context.SecurityContextHolderFilter@47325b21, org.springframework.security.web.header.HeaderWriterFilter@62ea42d3, org.springframework.web.filter.CorsFilter@4846a225, org.springframework.security.web.authentication.logout.LogoutFilter@17fdc056, com.animalog.config.JwtAuthenticationFilter@235197f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14d56bca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b5563ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c19380d, org.springframework.security.web.session.SessionManagementFilter@712e7fd6, org.springframework.security.web.access.ExceptionTranslationFilter@c896aa1, org.springframework.security.web.access.intercept.AuthorizationFilter@24832f0f]
+2025-11-09T18:09:28.946+05:30  WARN 33320 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-09T18:09:28.990+05:30  WARN 33320 --- [AnimaLog] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-11-09T18:09:28.994+05:30  INFO 33320 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:09:29.000+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-09T18:09:29.009+05:30  INFO 33320 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-09T18:09:29.033+05:30  INFO 33320 --- [AnimaLog] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-09T18:09:29.060+05:30 ERROR 33320 --- [AnimaLog] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-11-09T18:10:42.912+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 12864 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T18:10:42.914+05:30 DEBUG 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T18:10:42.915+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T18:10:42.974+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-09T18:10:42.974+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-09T18:10:43.969+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T18:10:44.054+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2025-11-09T18:10:44.786+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T18:10:44.796+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T18:10:44.797+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T18:10:44.920+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T18:10:44.921+05:30  INFO 12864 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1946 ms
+2025-11-09T18:10:45.066+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T18:10:45.138+05:30  INFO 12864 --- [AnimaLog] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-09T18:10:45.179+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T18:10:45.439+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T18:10:45.471+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-09T18:10:45.646+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ab3ce9e
+2025-11-09T18:10:45.650+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-09T18:10:45.728+05:30  WARN 12864 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T18:10:46.946+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T18:10:47.170+05:30  INFO 12864 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:10:47.539+05:30 DEBUG 12864 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T18:10:48.100+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T18:10:48.309+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26e29cea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71488bd1, org.springframework.security.web.context.SecurityContextHolderFilter@4849f3d4, org.springframework.security.web.header.HeaderWriterFilter@73fcf1b5, org.springframework.web.filter.CorsFilter@79cb330e, org.springframework.security.web.authentication.logout.LogoutFilter@579c52de, com.animalog.config.JwtAuthenticationFilter@164c6ee9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3953089b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1eee641b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cd3add5, org.springframework.security.web.session.SessionManagementFilter@45dd9d50, org.springframework.security.web.access.ExceptionTranslationFilter@72244b6a, org.springframework.security.web.access.intercept.AuthorizationFilter@1ac9b699]
+2025-11-09T18:10:48.680+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-09T18:10:48.751+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-11-09T18:10:48.764+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Started AnimaLogApplication in 6.352 seconds (process running for 7.189)
+2025-11-09T18:13:51.191+05:30  INFO 12864 --- [AnimaLog] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-09T18:13:51.223+05:30  INFO 12864 --- [AnimaLog] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:13:51.231+05:30  INFO 12864 --- [AnimaLog] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-09T18:13:51.258+05:30  INFO 12864 --- [AnimaLog] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-09T18:13:51.396+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 12864 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T18:13:51.397+05:30 DEBUG 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T18:13:51.397+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T18:13:51.915+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T18:13:51.949+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 7 JPA repository interfaces.
+2025-11-09T18:13:52.299+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T18:13:52.301+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T18:13:52.301+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T18:13:52.353+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T18:13:52.354+05:30  INFO 12864 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2025-11-09T18:13:52.466+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T18:13:52.486+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T18:13:52.496+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T18:13:52.499+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-09T18:13:52.512+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@785e339f
+2025-11-09T18:13:52.514+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-09T18:13:52.518+05:30  WARN 12864 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T18:13:52.725+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 38720 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T18:13:52.730+05:30 DEBUG 38720 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T18:13:52.731+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T18:13:52.832+05:30  INFO 38720 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-09T18:13:52.832+05:30  INFO 38720 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-09T18:13:52.880+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T18:13:53.030+05:30  INFO 12864 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:13:53.181+05:30 DEBUG 12864 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T18:13:53.790+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T18:13:53.978+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4587fea1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50db9de1, org.springframework.security.web.context.SecurityContextHolderFilter@1eee36ff, org.springframework.security.web.header.HeaderWriterFilter@7555da84, org.springframework.web.filter.CorsFilter@3e79d414, org.springframework.security.web.authentication.logout.LogoutFilter@54844e37, com.animalog.config.JwtAuthenticationFilter@4fceb882, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26324e4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d6821f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a3164a0, org.springframework.security.web.session.SessionManagementFilter@105c4013, org.springframework.security.web.access.ExceptionTranslationFilter@64db87e1, org.springframework.security.web.access.intercept.AuthorizationFilter@3384eb10]
+2025-11-09T18:13:54.181+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-09T18:13:54.209+05:30  INFO 12864 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-11-09T18:13:54.218+05:30  INFO 12864 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Started AnimaLogApplication in 2.872 seconds (process running for 192.642)
+2025-11-09T18:13:54.222+05:30  INFO 12864 --- [AnimaLog] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-09T18:13:54.579+05:30  INFO 38720 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T18:13:54.669+05:30  INFO 38720 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 7 JPA repository interfaces.
+2025-11-09T18:13:55.472+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T18:13:55.488+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T18:13:55.488+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T18:13:55.571+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T18:13:55.572+05:30  INFO 38720 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2737 ms
+2025-11-09T18:13:55.859+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T18:13:57.329+05:30  INFO 38720 --- [AnimaLog] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-09T18:13:57.383+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T18:13:57.712+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T18:13:57.754+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-09T18:13:57.943+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c347b8
+2025-11-09T18:13:57.946+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-09T18:13:58.041+05:30  WARN 38720 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T18:13:59.406+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T18:13:59.650+05:30  INFO 38720 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:14:00.021+05:30 DEBUG 38720 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T18:14:00.692+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T18:14:01.143+05:30  INFO 38720 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d8551f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18ce3865, org.springframework.security.web.context.SecurityContextHolderFilter@6b20cb19, org.springframework.security.web.header.HeaderWriterFilter@16fe6b4a, org.springframework.web.filter.CorsFilter@f50194c, org.springframework.security.web.authentication.logout.LogoutFilter@37e9dc06, com.animalog.config.JwtAuthenticationFilter@ed6c74a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5700d1e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25570dc4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@619e0c3f, org.springframework.security.web.session.SessionManagementFilter@3bf32d6f, org.springframework.security.web.access.ExceptionTranslationFilter@56f0b01a, org.springframework.security.web.access.intercept.AuthorizationFilter@29a980e9]
+2025-11-09T18:14:01.915+05:30  WARN 38720 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-09T18:14:02.001+05:30  WARN 38720 --- [AnimaLog] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-11-09T18:14:02.014+05:30  INFO 38720 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:14:02.023+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-09T18:14:02.042+05:30  INFO 38720 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-09T18:14:02.084+05:30  INFO 38720 --- [AnimaLog] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-09T18:14:02.145+05:30 ERROR 38720 --- [AnimaLog] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-11-09T18:14:22.795+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 22532 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T18:14:22.797+05:30 DEBUG 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T18:14:22.798+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T18:14:22.863+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-09T18:14:22.863+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-09T18:14:23.942+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T18:14:24.039+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 7 JPA repository interfaces.
+2025-11-09T18:14:24.893+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T18:14:24.907+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T18:14:24.908+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T18:14:24.997+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T18:14:24.997+05:30  INFO 22532 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2133 ms
+2025-11-09T18:14:25.129+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T18:14:25.182+05:30  INFO 22532 --- [AnimaLog] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-09T18:14:25.226+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T18:14:25.488+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T18:14:25.520+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-09T18:14:25.704+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17a393cf
+2025-11-09T18:14:25.709+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-09T18:14:25.783+05:30  WARN 22532 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T18:14:27.025+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T18:14:27.253+05:30  INFO 22532 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T18:14:27.640+05:30 DEBUG 22532 --- [AnimaLog] [restartedMain] c.a.config.JwtAuthenticationFilter       : Filter 'jwtAuthenticationFilter' configured for use
+2025-11-09T18:14:28.169+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-09T18:14:28.361+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47446565, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f0c5a96, org.springframework.security.web.context.SecurityContextHolderFilter@6f921de0, org.springframework.security.web.header.HeaderWriterFilter@71e037db, org.springframework.web.filter.CorsFilter@5c1c88da, org.springframework.security.web.authentication.logout.LogoutFilter@3aa673e3, com.animalog.config.JwtAuthenticationFilter@42cd9255, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f6e8092, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17b78c12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7172cde3, org.springframework.security.web.session.SessionManagementFilter@52ba936c, org.springframework.security.web.access.ExceptionTranslationFilter@175a012b, org.springframework.security.web.access.intercept.AuthorizationFilter@b9c679c]
+2025-11-09T18:14:28.693+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-09T18:14:29.079+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-11-09T18:14:29.089+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Started AnimaLogApplication in 6.804 seconds (process running for 7.639)
+2025-11-09T18:17:47.602+05:30  INFO 22532 --- [AnimaLog] [http-nio-8081-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-09T18:17:47.607+05:30  INFO 22532 --- [AnimaLog] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-09T18:17:47.621+05:30  INFO 22532 --- [AnimaLog] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2025-11-09T18:17:47.685+05:30  WARN 22532 --- [AnimaLog] [http-nio-8081-exec-5] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-09T18:19:03.313+05:30  WARN 22532 --- [AnimaLog] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-11-09T18:19:10.028+05:30  WARN 22532 --- [AnimaLog] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-11-09T19:18:13.133+05:30  INFO 22532 --- [AnimaLog] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 48 class path changes (4 additions, 21 deletions, 23 modifications)
+2025-11-09T19:18:13.411+05:30  INFO 22532 --- [AnimaLog] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T19:18:13.515+05:30  INFO 22532 --- [AnimaLog] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-09T19:18:13.557+05:30  INFO 22532 --- [AnimaLog] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-09T19:18:14.249+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Starting AnimaLogApplication using Java 17 with PID 22532 (C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog\target\classes started by Chaithanya D in C:\Users\chait\OneDrive\Downloads\animalog (1)\animalog)
+2025-11-09T19:18:14.251+05:30 DEBUG 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-09T19:18:14.251+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.animalog.AnimaLogApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-11-09T19:18:15.058+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09T19:18:15.092+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 6 JPA repository interfaces.
+2025-11-09T19:18:15.467+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-09T19:18:15.472+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-09T19:18:15.477+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-09T19:18:15.520+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-11-09T19:18:15.520+05:30  INFO 22532 --- [AnimaLog] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1259 ms
+2025-11-09T19:18:15.572+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09T19:18:15.580+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-09T19:18:15.590+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09T19:18:15.593+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-09T19:18:15.641+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1408ab
+2025-11-09T19:18:15.642+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-09T19:18:15.648+05:30  WARN 22532 --- [AnimaLog] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-09T19:18:15.825+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09T19:18:16.948+05:30  INFO 22532 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T19:18:17.105+05:30  WARN 22532 --- [AnimaLog] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vaccinationController': Lookup method resolution failed
+2025-11-09T19:18:17.105+05:30  INFO 22532 --- [AnimaLog] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09T19:18:17.106+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-11-09T19:18:17.109+05:30  INFO 22532 --- [AnimaLog] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-11-09T19:18:17.111+05:30  INFO 22532 --- [AnimaLog] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-09T19:18:17.119+05:30  INFO 22532 --- [AnimaLog] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-09T19:18:17.160+05:30 ERROR 22532 --- [AnimaLog] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vaccinationController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1295) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1190) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.animalog.AnimaLogApplication.main(AnimaLogApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.animalog.controller.VaccinationController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@63e1f99a]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: VaccinationDTO
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: VaccinationDTO
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 30 common frames omitted
+

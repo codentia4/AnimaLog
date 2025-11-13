@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/owner/dashboard}" class="active">Dashboard</a>
+                <a th:href="@{/owner/pets}">My Pets</a>
+                <a th:href="@{/owner/appointments}">Appointments</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, <span th:text="${user != null ? user.fullName : 'User'}"></span>!</p>
+                </div>
+            </header>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🐕</div>
+                    <div class="stat-info">
+                        <h3 th:text="${totalPets != null ? totalPets : 0}">0</h3>
+                        <p>Total Pets</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <h3>0</h3>
+                        <p>Upcoming Appointments</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2>My Pets</h2>
+                    <a th:href="@{/owner/pets/add}" class="btn-primary">Add New Pet</a>
+                </div>
+                
+                <div th:if="${pets != null and !pets.isEmpty()}" class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Species</th>
+                                <th>Breed</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="pet : ${pets}">
+                                <td th:text="${pet.name}">Max</td>
+                                <td th:text="${pet.species}">Dog</td>
+                                <td th:text="${pet.breed}">Golden Retriever</td>
+                                <td>
+                                    <span class="badge badge-success" th:text="${pet.status}">ACTIVE</span>
+                                </td>
+                                <td>
+                                    <a th:href="@{/owner/pets/{id}(id=${pet.id})}" class="btn-sm">View</a>
+                                    <a th:href="@{/owner/pets/edit/{id}(id=${pet.id})}" class="btn-sm">Edit</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div th:if="${pets == null or pets.isEmpty()}" class="empty-state">
+                    <div class="empty-state-icon">🐾</div>
+                    <h3>No pets yet</h3>
+                    <p>Start by adding your first pet!</p>
+                    <a th:href="@{/owner/pets/add}" class="btn-primary">Add Pet</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>

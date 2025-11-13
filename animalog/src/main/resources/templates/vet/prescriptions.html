@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescriptions - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/vet/dashboard}">Dashboard</a>
+                <a th:href="@{/vet/appointments}">Appointments</a>
+                <a th:href="@{/vet/medical-records}">Medical Records</a>
+                <a th:href="@{/vet/vaccinations}">Vaccinations</a>
+                <a th:href="@{/vet/prescriptions}" class="active">Prescriptions</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Prescriptions</h1>
+                <a th:href="@{/vet/prescriptions/add}" class="btn-primary">Add Prescription</a>
+            </header>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pet ID</th>
+                            <th>Medication</th>
+                            <th>Dosage</th>
+                            <th>Frequency</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="presc : ${prescriptions}">
+                            <td th:text="${presc.petId}"></td>
+                            <td th:text="${presc.medicationName}"></td>
+                            <td th:text="${presc.dosage}"></td>
+                            <td th:text="${presc.frequency}"></td>
+                            <td th:text="${#temporals.format(presc.startDate, 'dd-MM-yyyy')}"></td>
+                            <td th:text="${#temporals.format(presc.endDate, 'dd-MM-yyyy')}"></td>
+                            <td>
+                                <span class="badge badge-info" th:text="${presc.status}"></span>
+                            </td>
+                            <td>
+                                <a th:href="@{/vet/prescriptions/edit/{id}(id=${presc.id})}" class="btn-sm">Edit</a>
+                                <a th:href="@{/vet/prescriptions/delete/{id}(id=${presc.id})}" 
+                                   class="btn-sm btn-danger"
+                                   onclick="return confirm('Delete this prescription?')">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

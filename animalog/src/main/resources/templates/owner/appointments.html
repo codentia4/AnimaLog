@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments - AnimaLog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🐾 AnimaLog</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/owner/dashboard}">Dashboard</a>
+                <a th:href="@{/owner/pets}">My Pets</a>
+                <a th:href="@{/owner/appointments}" class="active">Appointments</a>
+                <a th:href="@{/logout}">Logout</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>My Appointments</h1>
+                <a th:href="@{/owner/appointments/add}" class="btn-primary">Book New Appointment</a>
+            </header>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pet Name</th>
+                            <th>Date & Time</th>
+                            <th>Purpose</th>
+                            <th>Veterinarian</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="apt : ${appointments}">
+                            <td>
+                                <span th:each="pet : ${pets}" 
+                                      th:if="${pet.id == apt.petId}" 
+                                      th:text="${pet.name}">Pet Name</span>
+                            </td>
+                            <td th:text="${#temporals.format(apt.appointmentDatetime, 'dd-MM-yyyy HH:mm')}">01-01-2024 10:00</td>
+                            <td th:text="${apt.purpose}">Checkup</td>
+                            <td th:text="${apt.veterinarianName}">Dr. Smith</td>
+                            <td>
+                                <span class="badge" 
+                                      th:classappend="${apt.status.name() == 'SCHEDULED' ? 'badge-info' : (apt.status.name() == 'COMPLETED' ? 'badge-success' : 'badge-danger')}" 
+                                      th:text="${apt.status}">SCHEDULED</span>
+                            </td>
+                            <td>
+                                <!-- Show Cancel button only if status is SCHEDULED -->
+                                <a th:if="${apt.status.name() == 'SCHEDULED'}" 
+                                   th:href="@{/owner/appointments/cancel/{id}(id=${apt.id})}" 
+                                   class="btn-sm btn-danger"
+                                   onclick="return confirm('Are you sure you want to cancel this appointment?')">
+                                   Cancel
+                                </a>
+                                
+                                <!-- Show status for completed/cancelled -->
+                                <span th:if="${apt.status.name() == 'COMPLETED'}" 
+                                      style="color: #27ae60; font-weight: 600;">✓ Completed</span>
+                                <span th:if="${apt.status.name() == 'CANCELLED'}" 
+                                      style="color: #e74c3c; font-weight: 600;">✗ Cancelled</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Show message if no appointments -->
+                <div th:if="${appointments.isEmpty()}" class="empty-state">
+                    <div class="empty-state-icon">📅</div>
+                    <h3>No appointments yet</h3>
+                    <p>Book your first appointment to get started!</p>
+                    <a th:href="@{/owner/appointments/add}" class="btn-primary">Book Appointment</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>
